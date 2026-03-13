@@ -1,7 +1,5 @@
 # Roguelike Arcade
 
-Двумерная рогалик-игра с видом сверху, переписанная с фреймворка **PyGame** на **Python Arcade**.
-
 ## Описание
 
 Игрок оказывается на процедурно выбранной карте с препятствиями и должен выживать как можно дольше, отстреливая врагов и подбирая монеты. Очки начисляются за выживаемость, убийства и подобранные предметы. Между раундами можно потратить заработанные монеты в магазине на новые скины персонажа.
@@ -48,22 +46,6 @@ rogulike-arcade/
 pip install -r requirements.txt
 python main.py
 ```
-
-## Отличия от PyGame-версии
-
-| PyGame | Arcade |
-|---|---|
-| `pygame.sprite.Sprite` | `arcade.Sprite` |
-| `pygame.sprite.Group` | `arcade.SpriteList` |
-| `pygame.sprite.spritecollide` | `arcade.check_for_collision_with_list` |
-| `pygame.image.load` | `arcade.load_texture` |
-| `pygame.mixer.Sound` | `arcade.load_sound` + `arcade.play_sound` |
-| `pygame_gui.UIManager` | `arcade.gui.UIManager` |
-| `pygame.draw.rect` | `arcade.draw_rectangle_filled` |
-| `pygame.font.render` | `arcade.draw_text` |
-| Главный цикл вручную | `arcade.Window.on_update / on_draw` |
-| `pygame.math.Vector2` | `math.hypot` + простые float |
-| Y=0 сверху (вниз ↓) | Y=0 снизу (вверх ↑) |
 
 ## Авторы
 
